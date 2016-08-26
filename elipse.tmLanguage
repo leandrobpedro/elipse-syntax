@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>vbs</string>
+	</array>
+	<key>name</key>
+	<string>Elipse</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>source.vbs</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b((?&lt;=\S\.)(AckA(llAlarms|rea)|C(aptureScreen|hangePassword|ontext|reateLink)|D(e(activate|leteObject)|oModal)|E(Sign|xecuteExternalApp|xit)|Get(ChildObject|Formula(Unit|Value)DataObj|F(rame|ullUserName)|KeyPad|Mouse(X|Y)|Object|PowerExplorer|Screen|Value)|I(s(AppRunning|UserMemberOfGroup|WebViewer)|tem)|Lo(ad(Formula(Dlg|Values(|Quiet))|Report)|g(in(|User)|out)|gTrackingEvent)|P(asswordConfirm|laysound)|RemoveLink|S(ave|e(lectMenu|t(DBParameters|Value))|how((Date|File)Picker|P(ickColor|owerExplorer)|topsound))|T(oggleValue|rackEvent)|UserAdministration|Write(|Ex)))\b)</string>
+			<key>name</key>
+			<string>support.function.application.elipse</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(BS(hl|hr)|Choose|E3Format|Get(Bit|C(omputerName|urrentWindowsUserName)|LocalTime(|UTC))|IIf|Links|OPC(Get(Limit|Quality|SubStatus|Vendor)|Is(Bad|Good|Uncertain)|MakeQuality|Set(Limit|Quality|SubStatus|Vendor))|S(etBit|ourceTypeName))\b)</string>
+			<key>name</key>
+			<string>support.function.e3globals.elipse</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(A(boutBox|c(k(All|CurrentFilter|Selected)|tiv(ate|e((|(High|Low|Med|)(NACK|))Alarms))|dd(Item|Object))|larmCount)|BringToFront|C(l(ear(Fields|PenMarks)|ose)|o(ntext|pyConfig))|De(activate|elete(Object|Unbound(All|CurrentFilter|Selected)))|F(it(All|Pen)|romPixel(X|Y))|Get(ColumnValue|ChildObject|EventByIndex|FocusedEvent)|Item|LoadData|Re(query|setConfig|trieveE3QueryFields)|S(e(tFocus|ndToBack)|howCursors)|ToPixel(X|Y)|Zoom(In|Out))\b)</string>
+			<key>name</key>
+			<string>support.function.elipse</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(PathName)\b)</string>
+			<key>name</key>
+			<string>support.variable.elipse</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:(\b(Application|Screen)\b))</string>
+			<key>name</key>
+			<string>variable.language.elipse</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.elipse</string>
+	<key>uuid</key>
+	<string>4652c526-f6d6-4b02-8031-b3610664bc2c</string>
+</dict>
+</plist>

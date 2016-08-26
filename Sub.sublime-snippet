@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+Sub ${1:Foo}($2)
+	${3:' Code...}
+End Sub$0
+]]></content>
+	<tabTrigger>sub</tabTrigger>
+	<scope>source.elipse</scope>
+	<scope>source.vbs</scope>
+</snippet>

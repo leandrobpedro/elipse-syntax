@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+Set ${1:WshShell} = CreateObject("WScript.Shell")$0
+]]></content>
+	<tabTrigger>wsh</tabTrigger>
+	<scope>source.elipse</scope>
+	<scope>source.vbs</scope>
+</snippet>

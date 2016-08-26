@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+If (${1:True}) Then
+	${2:' Statments...}
+End If$0
+]]></content>
+	<tabTrigger>if</tabTrigger>
+	<scope>source.elipse</scope>
+	<scope>source.vbs</scope>
+</snippet>

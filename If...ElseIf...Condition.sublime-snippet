@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+If (${1:True}) Then
+	${2:' Statments...}
+ElseIf (${3:False}) Then
+	${4:' Else if statments...}
+Else
+	${5:' Else statments...}
+End If$0
+]]></content>
+	<tabTrigger>ifei</tabTrigger>
+	<scope>source.elipse</scope>
+	<scope>source.vbs</scope>
+</snippet>

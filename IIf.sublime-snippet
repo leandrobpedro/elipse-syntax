@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+IIf(${1:Condition}, ${2:ExprTrue}, ${3:ExprFalse})$0
+]]></content>
+	<tabTrigger>iif</tabTrigger>
+	<scope>source.elipse</scope>
+	<scope>source.vbs</scope>
+</snippet>

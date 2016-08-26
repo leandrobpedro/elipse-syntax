@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+Application.DoModal "${1:Screen}", "${2:Title}", ${3:Left}, ${4:Top}, ${5:Width}, ${6:Height}, ${7:Arg}, ${8:Flags}$0
+]]></content>
+	<tabTrigger>domodal</tabTrigger>
+	<scope>source.elipse</scope>
+</snippet>

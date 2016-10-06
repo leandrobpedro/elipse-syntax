@@ -5,6 +5,8 @@
 	<key>fileTypes</key>
 	<array>
 		<string>vbs</string>
+		<string>asp</string>
+		<string>bas</string>
 	</array>
 	<key>name</key>
 	<string>VBScript</string>
@@ -18,25 +20,25 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:(\b(False|True|Nothing|vb(A(bort(|RetryIgnore)|pplicationModal|rray)|B(inaryCompare|l(ack|ue)|oolean|yte)|C(ancel|r(|itical|Lf)|urrency|yan)|D(at(abaseCompare|aObject|e)|e(cimal|faultButton(1|2|3|4))|ouble)|E(mpty|rror|xclamation)|F(alse|irst(FourDays|FullWeek|Jan1)|ormFeed|riday)|G(eneralDate|reen)|I(gnore|n(formation|teger))|L(f|ong(|Date|Time))|M(agenta|onday|sgBox(HelpButton|Right|RtlReading|SetForeground))|N(ewLine|o|ull(|Char|String))|O(bject(|Error)|K(|Cancel|Only))|Question|Re(d|try(|Cancel))|S(aturday|hort(Date|Time)|ingle|tring|unday|ystemModal)|T(ab|extCompare|hursday|rue|uesday)|Use(Default|System(|DayOfWeek))|V(ariant|erticalTab)|W(ednesday|hite)|Y(e(llow|s(|(No(|Cancel))))))))\b)</string>
-			<key>name</key>
-			<string>constant.language.vbs</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>((&amp;(h|H)[0-9a-fA-F]{,2})|\b(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b</string>
 			<key>name</key>
 			<string>constant.numeric.vbs</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:(\b(And|C(a(ll|se)|lass|onst)|D(im|o)|E(ach|l(se|seIf)|nd|qv|rror|x(it|plicit))|I(f|mp|n|s)|For|Get|L(et|oop)|N(e(xt|w)|ot)|O(n|ption|r)|P(r(ivate|operty)|ublic)|Re(Dim|sume)|S(e(t|lect)|t(ep|op))|T(hen|o)|Until|Xor|W(end|ith|hile))(?!\s*(Sub|Function))\b))|(&amp;)</string>
+			<string>(?i:(\b(False|True|N(othing|ull)|vb(A(bort(|RetryIgnore)|pplicationModal|rray)|B(inaryCompare|l(ack|ue)|oolean|yte)|C(ancel|r(|itical|Lf)|urrency|yan)|D(at(abaseCompare|aObject|e)|e(cimal|faultButton(1|2|3|4))|ouble)|E(mpty|rror|xclamation)|F(alse|irst(FourDays|FullWeek|Jan1)|ormFeed|riday)|G(eneralDate|reen)|I(gnore|n(formation|teger))|L(f|ong(|Date|Time))|M(agenta|onday|sgBox(HelpButton|Right|RtlReading|SetForeground))|N(ewLine|o|ull(|Char|String))|O(bject(|Error)|K(|Cancel|Only))|Question|Re(d|try(|Cancel))|S(aturday|hort(Date|Time)|ingle|tring|unday|ystemModal)|T(ab|extCompare|hursday|rue|uesday)|Use(Default|System(|DayOfWeek))|V(ariant|erticalTab)|W(ednesday|hite)|Y(e(llow|s(|(No(|Cancel))))))))\b)</string>
+			<key>name</key>
+			<string>constant.language.vbs</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:(\b(And|C(a(ll|se)|lass|onst)|D(im|o)|E(ach|l(se|seIf)|nd|qv|rror|x(it|plicit))|I(f|mp|n|s)|For|G(et|oTo)|L(et|oop)|N(e(xt|w)|ot)|O(n|ption|r)|P(r(ivate|eserve|operty)|ublic)|Re(Dim|sume)|S(e(t|lect)|t(ep|op))|T(hen|o)|Until|Xor|W(end|ith|hile))(?!\s*(Sub|Function))\b))|(&amp;)</string>
 			<key>name</key>
 			<string>keyword.control.vbs</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(=|&lt;&gt;|&gt;|&lt;|&gt;=|&lt;=)</string>
+			<string>(=|&lt;&gt;|&gt;|&lt;|&gt;=|&lt;=|,)</string>
 			<key>name</key>
 			<string>keyword.operator.vbs</string>
 		</dict>
@@ -70,7 +72,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*((?i:Function|Sub|Public\s*(Function|Sub)|Private\s*(Function|Sub)))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?</string>
+			<string>\s*((?i:Function|Sub))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?</string>
 			<key>name</key>
 			<string>meta.funtion.vbs</string>
 		</dict>
@@ -79,6 +81,12 @@
 			<string>(?i:(\b(E(nd|xit)\s)(Function|Sub|)\b))</string>
 			<key>name</key>
 			<string>storage.type.vbs</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(Default|P(rivate|ublic))\b)</string>
+			<key>name</key>
+			<string>storage.modifier.vbs</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -96,6 +104,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?i:\b(Application)\b)</string>
+			<key>name</key>
+			<string>support.class.vbs</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(?i:\b(A(bs|rray|sc(|B|W)|tn)|C(B(ool|yte)|Cur|D(ate|bl)|hr(|B|W)|Int|Lng|os|reateObject|S(ng|tr))|Da(te(|Add|Diff|Part|Serial|Value)|y)|E(rase|scape|val|xecute(|Global)|xp)|F(i(lter|x)|ormat(Currency|DateTime|Number|Percent))|Get(Object|Locale|Ref)|H(ex|our)|I(n(putBox|Str(|B|Rev)|t)|s(Array|Date|Empty|Nu(ll|meric)|Object))|Join|L(Bound|Case|e(ft(|B)|n(|B))|o(adPicture|g)|Trim)|M(i(d(|B)|nute)|onth(|Name)|sgBox)|Now|Oct|R(andomize|eplace|GB|ight(|B)|nd|ound|Trim)|S(criptEngine(|(Build|Major|Minor)Version)|e(cond|tLocale)|gn|in|p(ace|lit)|qr|tr(Comp|ing|Reverse))|T(an|ime(|r|Serial|Value)|rim|ypeName)|U(Bound|Case|nescape)|VarType|Weekday(|Name)|Year)\b)</string>
 			<key>name</key>
 			<string>support.function.vbs</string>
@@ -103,7 +117,5 @@
 	</array>
 	<key>scopeName</key>
 	<string>source.vbs</string>
-	<key>uuid</key>
-	<string>a48cb6f6-7b25-4f40-b1e3-0482c1fb9b30</string>
 </dict>
 </plist>

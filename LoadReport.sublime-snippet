@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-Set ${1:Report} = Application.LoadReport("$2")$0
-]]></content>
-	<tabTrigger>loadreport</tabTrigger>
-	<scope>source.elipse</scope>
-</snippet>

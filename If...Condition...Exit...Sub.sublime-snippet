@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-If (${1:True}) Then Exit Sub$0
-]]></content>
-	<tabTrigger>ifexit</tabTrigger>
-	<scope>source.elipse</scope>
-	<scope>source.vbs</scope>
-</snippet>

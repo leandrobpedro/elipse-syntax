@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[
-Set ${1:Fso} = CreateObject("Scripting.FileSystemObject")$0
-]]></content>
-	<tabTrigger>fso</tabTrigger>
-	<scope>source.elipse</scope>
-	<scope>source.vbs</scope>
-</snippet>

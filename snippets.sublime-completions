@@ -1,0 +1,126 @@
+{
+	"scope": "source.elipse", 
+	"completions":
+	[
+		{ 	
+			"trigger": "addobject\tAddObject",
+			"contents": "${1:Application.GetObject(\"${2:}\")}.AddObject(\"${3:ClassName}\", ${4:Activate}, ${5:ObjectName})$0"
+		},
+		{
+			"trigger": "domodal\tDoModal",
+			"contents": "Application.DoModal \"${1:Screen}\", \"${2:Title}\", ${3:Left}, ${4:Top}, ${5:Width}, ${6:Height}, ${7:Arg}, ${8:Flags}$0"
+		},
+		{
+			"trigger": "dowhile\tDo...While",
+    		"contents": "Do While (${1:condition})\n\t${3:' Statments...}\nLoop$0"
+		},
+		{
+			"trigger": "doloopw\tDo...Loop...While",
+			"contents": "Do\n\t${1:' Statments...}\nLoop While (${2:condition})$0"
+		},
+		{
+			"trigger": "dountil\tDo...Until",
+			"contents": "Do Until (${1:condition})\n\t${2:' Statments...}\nLoop$0"
+		},
+		{
+			"trigger": "doloopu\tDo...Loop...Until",
+			"contents": "Do\n\t${1:' Statments...}\nLoop Until (${2:condition})$0"
+		},
+		{
+			"trigger": "fore\tFor...Each",
+			"contents": "For Each ${1:Obj} In ${2:target}\n\t${3:' Statments...}\nNext$0"
+		},
+		{
+			"trigger": "for\tFor...Next",
+			"contents": "For ${1:i} = ${2:1} To ${3:9}\n\t${4:' Statments...}\nNext$0"
+		},
+		{
+			"trigger": "fors\tFor...Step",
+			"contents": "For ${1:i} = ${2:1} To ${3:9} Step ${4:2}\n\t${5:' Statments...}\nNext$0"
+		},
+		{
+			"trigger": "function\tFunction",
+			"contents": "Function ${1:Foo}($2)\n\t${3:' Code...}\n\t${1:Foo} = ${4:retval}\nEnd Function$0"
+		},
+		{
+			"trigger": "ifexit\tIf Condition Exit Sub",
+			"contents": "If (${1:True}) Then Exit Sub$0"
+		},
+		{
+			"trigger": "if\tIf Condition",
+			"contents": "If (${1:True}) Then\n\t${2:' Statments...}\nEnd If$0"
+		},
+		{
+			"trigger": "ife\tIf Else Condition",
+			"contents": "If (${1:True}) Then\n\t${2:' Statments...}\nElse\n\t${3:' Else statments...}\nEnd If$0"
+		},
+		{
+			"trigger": "ifei\tIf ElseIf Condition",
+			"contents": "If (${1:True}) Then\n\t${2:' Statments...}\nElseIf (${3:False}) Then\n\t${4:' Else if statments...}\nElse\n\t${5:' Else statments...}\nEnd If$0"
+		},
+		{
+			"trigger": "iif\tIIf",
+			"contents": "IIf(${1:Condition}, ${2:ExprTrue}, ${3:ExprFalse})$0"
+		},
+		{
+			"trigger": "fso\tFile System Object",
+			"contents": "Set ${1:Fso} = CreateObject(\"Scripting.FileSystemObject\")$0"
+		},
+		{
+			"trigger": "msgbox\tMsgBox",
+			"contents": "MsgBox ${1:prompt}${2:, ${3:buttons}, ${4:title}${5:, ${6:helpfile}, ${7:context}}}$0"
+		},
+		{
+			"trigger": "loadreport\tLoad report",
+			"contents": "Set ${1:Report} = Application.LoadReport(\"$2\")$0"
+		},
+		{
+			"trigger": "onerrg\tOn Error GoTo 0",
+			"contents": "On Error GoTo 0$0"
+		},
+		{
+			"trigger": "onerrr\tOn Error Resume Next",
+			"contents": "On Error Resume Next$0"
+		},
+		{
+			"trigger": "open\tOpenScreen",
+			"contents": "Application.GetFrame(\"$1\").OpenScreen(\"$2\"), 0$0"
+		},
+		{
+			"trigger": "rgb\tRGB",
+			"contents": "RGB(${1:red}, ${2:blue}, ${3:green})$0"
+		},
+		{
+			"trigger": "select\tSelect Case",
+			"contents": "Select Case ${1:testexpression}\n\tCase ${2:expressionlist}\n\t\t${3:' Statements.}\n\tCase Else\n\t\t${4:' Else statements.}\nEnd Select$0"
+		},
+		{
+			"trigger": "showdatepicker\tShow Date Picker",
+			"contents": "Application.ShowDatePicker(${1:DateValue}, ${2:Left}, ${3:Top}, ${4:DefaultDate})$0"
+		},
+		{
+			"trigger": "showpickcolor\tShow Pick Color",
+			"contents": "Application.ShowPickColor(${1:ColorValue}, ${2:Color}, ${3:Left}, ${4:Top})$0"
+		},
+		{
+			"trigger": "sub\tSub",
+			"contents": "Sub ${1:Foo}($2)\n\t${3:' Code...}\nEnd Sub$0"
+		},
+		{
+			"trigger": "trace\tTrace",
+			"contents": "Application.Trace \"$1\"$0"
+		},
+		{
+			"trigger": "todo\tTODO",
+			"contents": "' TODO: $0"
+		},
+		{
+			"trigger": "with\tWith",
+			"contents": "With ${1:Obj}\n\t${2:' Statements}\nEnd With$0"
+		},
+		{
+			"trigger": "wsh\tWshShell",
+			"contents": "Set ${1:WshShell} = CreateObject(\"WScript.Shell\")$0"
+		}
+	]
+}

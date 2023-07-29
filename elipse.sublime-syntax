@@ -1,0 +1,118 @@
+%YAML 1.2
+---
+name: VBScript (Elipse)
+file_extensions: [vbs]
+scope: source.elipse
+
+extends: Packages/ASP/ASP.sublime-syntax
+
+contexts:
+  prototype:
+    - include: comments
+    - include: function
+    - include: string
+
+  function:
+    - meta_prepend: true
+    - match: '"'
+      push: string
+
+    # Viewer (Application)
+    - match: (?i:\b(CaptureScreen|ChangePassword|ChangeUserPassword|DoModal|ESign|ExecuteExternalApp|GetFormulaUnitDataObj|GetFormulaValueDataObj|GetFrame|GetFullUserName|GetKeyPad|GetMouseX|GetMouseY|GetPowerExplorer|GetScreen|GetValue|IsAppRunning|IsUserMemberOfGroup|IsWebViewer|LoadFormulaDlg|LoadFormulaValues|LoadFormulaValuesQuiet|LoadReport|Login|LoginUser|LoginWindowsUser|Logout|PasswordConfirm|Playsound|SelectMenu|SetValue|ShowDatePicker|ShowFilePicker|ShowPickColor|ShowPowerExplorer|Stopsound|ToggleValue|Trace|TrackEvent|UserAdministration)\b)
+      scope: support.function.elipse
+
+    # Methods
+    - match: (?i:\b(Activate|AddObject|Context|Deactivate|DeleteObject|GetChildObject|GetObject|Item|Save)\b)
+      scope: support.function.elipse
+
+    # E3Globals
+    - match: (?i:\b((BShl|BShr|Choose|DwordToLong|E3Format|E3ProductString|E3ProductVersionBuild|E3ProductVersionMajor|E3ProductVersionMinor|GetBit|GetComputerName|GetCurrentWindowsUserName|GetLocalTime|GetLocalTimeUTC|IIf|LongToDword|MsgBoxEx|OPCGetLimit|OPCGetQuality|OPCGetSubStatus|OPCGetVendor|OPCIsBad|OPCIsGood|OPCIsUncertain|OPCMakeQuality|OPCSetLimit|OPCSetQuality|OPCSetSubStatus|OPCSetVendor|SetBit|SourceTypeName))\b)
+      scope: support.function.elipse
+
+    # Common Methods
+    - match: (?i:\b((CreateLink|Item|RemoveLink))\b)
+      scope: support.function.elipse
+
+    # Splitter Methods
+    - match: (?i:\b((BringToFront|CaptureScreen|Close|FlashWindow|MaximizeFrame|MinimizeFrame|MoveFrame|OpenScreen|Refresh|RestoreFrame|SetDisableTaskSwitching|SetForegroundWnd|SetFrameOptions|ShowScreen))\b)
+      scope: support.function.elipse
+
+    # Screen Methods
+    - match: (?i:\b(Close|FromPixelX|FromPixelY|ToPixelX|ToPixelY)\b)
+      scope: support.function.elipse
+
+    # Screen Common Methods
+    - match: (?i:\b(BringToFront|FitObject|SendToBack|SetFocus)\b)
+      scope: support.function.elipse
+
+    # Elipse KeyPad
+    - match: (?i:\b(Hide|Show)\b)
+      scope: support.function.elipse
+
+    # E3Alarm
+    - match: (?i:\b(AboutBox|AckAll|AckCurrentFilter|AckSelected|DeleteUnboundAll|DeleteUnboundCurrentFilter|DeleteUnboundSelected|GetEventByIndex|GetFocusedEvent|SetConfig)\b)
+      scope: support.function.elipse
+
+    # E3Browser
+    - match: (?i:\b(AboutBox|ClearFields|GetColumnValue|Requery|RetrieveE3QueryFields)\b)
+      scope: support.function.elipse
+
+    # E3Chart - Axis - Pens
+    - match: (?i:\b(AddAxis|AddPen|AddPoint|AddQuery|ChangePenPos|Clear|ClearPenMarks|Connect|CopyConfig|Disconnect|FitAll|FitPen|GetCursorPos|GetHistoricPeriod|GetMinMax|GetPoint|GetRealTimePeriod|GetTickSpacing|Item|LoadData|Remove|ResetConfig|SetCursorPos|SetHistoricPeriod|SetMinMax|SetRealTimePeriod|SetTickSpacing|ShowCursors|UpdateData|ZoomIn|ZoomOut)\b)
+      scope: support.function.elipse
+
+    # E3Playback
+    - match: (?i:\b(Play|Pause|Stop)\b)
+      scope: support.function.elipse
+
+    # Reports
+    - match: (?i:\b(Export|GetExportFilter|Print|PrintPreview|Query)\b)
+      scope: support.function.elipse
+
+    # PowerExplorer
+    - match: (?i:\b(CenterWindow|Close|GetScreenTabFrame|InsertScreenTab|RemoveScreenTab|SetWindowPlacement|Show)\b)
+      scope: support.function.elipse
+
+    # Database
+    - match: (?i:\b(SetDBParameters)\b)
+      scope: support.function.elipse
+
+    # Drivers
+    - match: (?i:\b(Write|WriteEx)\b)
+      scope: support.function.elipse
+
+    # Command Unit
+    - match: (?i:\b(Abort|Select|Cancel|Operate)\b)
+      scope: support.function.elipse
+      meta_include_prototype: true
+
+    # Devices
+    - match: (?i:\b(GetMeasurement)\b)
+      scope: support.function.elipse
+
+    # Formulas
+    - match: (?i:\b(CreateUnit|CreateValue|DeleteUnit|DeleteValue|FindUnit|FindValue|GetUnitData|GetValueData|LoadFormulaValuesQuiet|RenameUnit|RenameValue|SaveFormulaValues|SetUnitData|SetValueData)\b)
+      scope: support.function.elipse
+
+    # Formulas
+    - match: (?i:\b(CreateUnit|CreateValue|DeleteUnit|DeleteValue|FindUnit|FindValue|GetUnitData|GetValueData|LoadFormulaValuesQuiet|RenameUnit|RenameValue|SaveFormulaValues|SetUnitData|SetValueData)\b)
+      scope: support.function.elipse
+
+    # Historic/Storage
+    - match: (?i:\b(StartAcquisition|StopAcquisition|WriteRecord|AddField|DeleteField|CreateNewSession|AddValue|Commit)\b)
+      scope: support.function.elipse
+
+    # E3StudioApplication
+    - match: (?i:\b(CreateFile|CreateFolder|CreatePRJ|DeleteFile|ListFiles|RenameFolder|Trace|Verify)\b)
+      scope: support.function.elipse
+
+    # Server
+    - match: (?i:\b(ClearFailure|E3GetActor|IsUserMemberOfGroup|LoadReport|ReportFailure|Trace|TrackEvent)\b)
+      scope: support.function.elipse
+
+  string:
+    - meta_scope: string.quoted.double.elipse
+    - match: \\.
+      scope: constant.character.escape.elipse
+    - match: '"'
+      pop: true

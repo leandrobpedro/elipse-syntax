@@ -1,0 +1,142 @@
+// 
+{
+	"scope": "source.elipse", 
+	"completions":
+	[
+		{
+			"trigger": "addobject",
+			"annotation": "AddObject",
+			"contents": "${1:Application.GetObject(\"${2:}\")}.AddObject(\"${3:ClassName}\", ${4:Activate}, ${5:ObjectName})$0\n",
+		},
+		{
+			"annotation": "DoModal",
+			"trigger": "domodal",
+			"contents": "Application.DoModal \"${1:Screen}\", \"${2:Title}\", ${3:Left}, ${4:Top}, ${5:Width}, ${6:Height}, ${7:Arg}, ${8:Flags}$0\n"
+		},
+		{
+			"annotation": "Do...While",
+			"trigger": "dowhile",
+    		"contents": "Do While (${1:condition})\n	${3:' Statments...}\nLoop$0\n"
+		},
+		{
+			"annotation": "Do...Loop...While",
+			"trigger": "doloopw",
+			"contents": "Do\n	${1:' Statments...}\nLoop While (${2:condition})$0\n"
+		},
+		{
+			"annotation": "Do...Until",
+			"trigger": "dountil",
+			"contents": "Do Until (${1:condition})\n	${2:' Statments...}\nLoop$0\n"
+		},
+		{
+			"annotation": "Do...Loop...Until",
+			"trigger": "doloopu",
+			"contents": "Do\n	${1:' Statments...}\nLoop Until (${2:condition})$0\n"
+		},
+		{
+			"annotation": "For...Each",
+			"trigger": "fore",
+			"contents": "For Each ${1:obj} In ${2:target}\n	${3:' Statments...}\nNext$0\n"
+		},
+		{
+			"annotation": "For...Next",
+			"trigger": "for",
+			"contents": "For ${1:i} = ${2:1} To ${3:9}\n	${4:' Statments...}\nNext$0\n"
+		},
+		{
+			"annotation": "For...Step",
+			"trigger": "fors",
+			"contents": "For ${1:i} = ${2:1} To ${3:9} Step ${4:2}\n	${5:' Statments...}\nNext$0\n"
+		},
+		{
+			"annotation": "Function",
+			"trigger": "function",
+			"contents": "Function ${1:Foo}($2)\n	${3:' Code...}\n	${1:Foo} = ${4:retval}\nEnd Function$0\n"
+		},
+		{
+			"annotation": "If Condition Exit Sub",
+			"trigger": "ifexit",
+			"contents": "If (${1:True}) Then Exit Sub$0\n"
+		},
+		{
+			"annotation": "If Condition",
+			"trigger": "if",
+			"contents": "If (${1:True}) Then\n	${2:' Statments...}\nEnd If$0\n"
+		},
+		{
+			"annotation": "If Else Condition",
+			"trigger": "ife",
+			"contents": "If (${1:True}) Then\n	${2:' Statments...}\nElse\n	${3:' Else statments...}\nEnd If$0\n"
+		},
+		{
+			"annotation": "If ElseIf Condition",
+			"trigger": "ifei",
+			"contents": "If (${1:True}) Then\n	${2:' Statments...}\nElseIf (${3:False}) Then\n	${4:' Else if statments...}\nElse\n	${5:' Else statments...}\nEnd If$0\n"
+		},
+		{
+			"annotation": "IIf",
+			"trigger": "iif",
+			"contents": "IIf(${1:Condition}, ${2:ExprTrue}, ${3:ExprFalse})$0\n"
+		},
+		{
+			"annotation": "MsgBox",
+			"trigger": "msgbox",
+			"contents": "MsgBox ${1:prompt}${2:, ${3:buttons}, ${4:title}${5:, ${6:helpfile}, ${7:context}}}$0\n"
+		},
+		{
+			"annotation": "Load report",
+			"trigger": "loadreport",
+			"contents": "Set ${1:objReport} = Application.LoadReport(\"$2\")$0\n"
+		},
+		{
+			"annotation": "On Error GoTo 0",
+			"trigger": "onerrorgoto",
+			"contents": "On Error GoTo 0$0\n"
+		},
+		{
+			"annotation": "On Error Resume Next",
+			"trigger": "onerrorrresume",
+			"contents": "On Error Resume Next$0\n"
+		},
+		{
+			"annotation": "OpenScreen",
+			"trigger": "open",
+			"contents": "Application.GetFrame(\"$1\").OpenScreen(\"$2\"), 0$0\n"
+		},
+		{
+			"annotation": "RGB",
+			"trigger": "rgb",
+			"contents": "RGB(${1:red}, ${2:blue}, ${3:green})$0\n"
+		},
+		{
+			"annotation": "Select Case",
+			"trigger": "select",
+			"contents": "Select Case ${1:testexpression}\n	Case ${2:expressionlist}\n		${3:' Statements.}\n	Case Else\n		${4:' Else statements.}\nEnd Select$0\n"
+		},
+		{
+			"annotation": "Show Date Picker",
+			"trigger": "showdatepicker",
+			"contents": "Application.ShowDatePicker(${1:DateValue}, ${2:Left}, ${3:Top}, ${4:DefaultDate})$0\n"
+		},
+		{
+			"annotation": "Show Pick Color",
+			"trigger": "showpickcolor",
+			"contents": "Application.ShowPickColor(${1:ColorValue}, ${2:Color}, ${3:Left}, ${4:Top})$0\n"
+		},
+		{
+			"annotation": "Sub",
+			"trigger": "sub",
+			"contents": "Sub ${1:Foo}($2)\n	${3:' Code...}\nEnd Sub$0\n"
+		},
+		{
+			"annotation": "Trace",
+			"trigger": "trace",
+			"contents": "Application.Trace \"$1\"$0\n"
+		},
+		{
+			"annotation": "With",
+			"trigger": "with",
+			"contents": "With ${1:obj}\n	${2:' Statements}\nEnd With$0\n"
+		}
+	]
+}
